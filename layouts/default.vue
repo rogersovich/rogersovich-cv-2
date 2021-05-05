@@ -56,20 +56,22 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer color="white">
+    <v-footer color="gray">
       <v-col class="text-center tw-font-poppins" cols="12">
         <div class="tw-inline-flex tw-items-center">
           <v-img
             contain
-            height="35"
-            width="35"
+            :height="$vuetify.breakpoint.smAndUp ? 35 : 25"
+            :width="$vuetify.breakpoint.smAndUp ? 35 : 25"
             src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/house-stark_5BAFaqtUD.svg"
           ></v-img>
-          <span class="tw-text-dark tw-mx-4">© 2021 design by rogersovich</span>
+          <span class="tw-text-dark tw-mx-4 tw-text-xs md:tw-text-base"
+            >© 2021 design by rogersovich</span
+          >
           <v-img
             contain
-            height="35"
-            width="35"
+            :height="$vuetify.breakpoint.smAndUp ? 35 : 25"
+            :width="$vuetify.breakpoint.smAndUp ? 35 : 25"
             style="transform: scaleX(-1)"
             src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/targaryen-house_Iwk_7YWj3NM.svg"
           ></v-img>

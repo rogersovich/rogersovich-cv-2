@@ -36,11 +36,11 @@
               </div>
 
               <div
-                class="md:tw-col-span-1 tw-col-span-2 tw-flex tw-items-center tw-justify-center"
+                class="md:tw-col-span-1 tw-col-span-2 tw-flex tw-items-center md:tw-justify-start tw-justify-center"
               >
-                <div class="tw-block tw-text-center">
+                <div class="tw-block md:tw-text-left tw-text-center">
                   <p
-                    class="tw-font-medium tw-text-dark tw-text-xl tw-tracking-wide tw-mb-2"
+                    class="tw-font-medium tw-text-dark md:tw-text-3xl tw-text-xl tw-tracking-wide tw-mb-2"
                   >
                     {{ item.title }}
                   </p>
@@ -66,8 +66,8 @@
                 <div class="tw-block">
                   <v-img
                     contain
-                    width="200"
-                    height="220"
+                    width="250"
+                    height="250"
                     :src="item.thumbnail"
                   ></v-img>
                 </div>
