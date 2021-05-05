@@ -2,22 +2,27 @@
   <v-card id="profile-id" elevation="0">
     <v-row>
       <v-col cols="6">
-        <div class="tw-px-8 tw-py-8">
+        <div class="tw-py-8">
           <div
-            class="tw-font-light tw-text-secondary-1 tw-tracking-wide tw-mb-2"
+            class="tw-font-light tw-text-dark-1 tw-tracking-wide tw-mb-2 tw-inline-flex tw-items-center"
           >
-            <v-icon class="tw-text-xl tw-mr-3">mdi-lightbulb-on-outline</v-icon>
-            <span> Bogor, West Java</span>
+            <v-img
+              height="18"
+              width="18"
+              contain
+              src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-light-100__JqX_YhuW87.png"
+            ></v-img>
+            <span class="tw-ml-2"> Bogor, West Java</span>
           </div>
-          <div class="tw-text-secondary">
+          <div class="tw-text-dark">
             <h4 class="tw-font-bold tw-text-4xl">Hello Guys!</h4>
             <h4 class="tw-font-bold tw-text-4xl tw-my-3">My name’s Roger</h4>
             <h4 class="tw-font-bold tw-text-4xl">I’m Fullstack Developer</h4>
           </div>
-          <div class="tw-my-8 tw-w-32 tw-h-0.5 tw-bg-secondary"></div>
+          <div class="tw-my-8 tw-w-32 tw-h-0.5 tw-bg-dark"></div>
           <div>
             <span
-              class="tw-font-light tw-tracking-widest tw-text-xl tw-text-secondary"
+              class="tw-font-light tw-tracking-widest tw-text-xl tw-text-dark"
               >Welcome to My Portofolio website</span
             >
           </div>
@@ -32,21 +37,26 @@
               depressed
               rounded
               outlined
-              color="secondary"
+              color="dark"
               class="focus:tw-outline-none tw-tracking-wide tw-normal-case tw-px-6 tw-ml-2"
               >See my works</v-btn
             >
           </div>
           <div class="tw-mt-6 tw-inline-flex tw-items-center">
-            <v-img
+            <a
               v-for="(item, i) in socialMedia"
               :key="i"
-              contain
-              :height="item.height"
-              :width="item.width"
-              :src="item.src"
-              class="tw-mr-4 tw-cursor-pointer"
-            ></v-img>
+              :href="item.href"
+              target="_blank"
+            >
+              <v-img
+                contain
+                :height="item.height"
+                :width="item.width"
+                :src="item.src"
+                class="tw-mr-4 tw-cursor-pointer"
+              ></v-img>
+            </a>
           </div>
         </div>
       </v-col>
@@ -70,6 +80,7 @@ export default {
           text: 'instagram',
           height: 26,
           width: 26,
+          href: 'https://www.instagram.com/rogersovichhh/?hl=id',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-instagram_1_gejV_R2ZIEE3.png',
         },
@@ -77,6 +88,7 @@ export default {
           text: 'email',
           height: 22,
           width: 22,
+          href: 'mailto:dimasroger89@gmail.com',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-mail_1_xNz44cbwv.png',
         },
@@ -84,6 +96,7 @@ export default {
           text: 'linkedin',
           height: 22,
           width: 22,
+          href: 'https://www.linkedin.com/in/dimas-roger-9b93491a1/',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-linkedin_1_ZocfHgbrP.png',
         },
@@ -91,6 +104,7 @@ export default {
           text: 'secret',
           height: 30,
           width: 30,
+          href: 'https://github.com/rogersovich',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-pentagram-devil-100_NxUDCr-QN.png',
         },

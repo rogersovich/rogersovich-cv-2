@@ -53,7 +53,9 @@ export default {
       themes: {
         light: {
           primary: '#38B4EE',
-          secondary: '#1D1D1D',
+          secondary: '#273BF3',
+          dark: '#1d1d1d',
+          'dark-1': '#2D3436',
         },
       },
     },

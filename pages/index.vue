@@ -3,6 +3,9 @@
     <v-col cols="12">
       <beranda-component></beranda-component>
     </v-col>
+    <v-col cols="12">
+      <portofolio-component></portofolio-component>
+    </v-col>
   </v-row>
 </template>
 

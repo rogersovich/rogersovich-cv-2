@@ -1,7 +1,6 @@
 <template>
   <v-app dark>
     <v-app-bar
-      elevation="2"
       elevate-on-scroll
       color="white"
       app
@@ -37,7 +36,7 @@
       </v-btn-toggle>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="tw-my-8">
         <nuxt />
       </v-container>
     </v-main>
