@@ -26,7 +26,7 @@
           :key="i"
           :ref="item.value"
           :value="item.value"
-          class="focus:tw-outline-none tw-capitalize tw-tracking-wide tw-text-secondary-1"
+          class="focus:tw-outline-none tw-capitalize tw-px-6 tw-tracking-wide tw-text-secondary-1"
           active-class="tw-text-primary tw-font-bold"
           @click="handleGoTo(item.value)"
         >
@@ -35,12 +35,38 @@
           </span>
         </v-btn>
       </v-btn-toggle>
+      <v-btn
+        depressed
+        class="focus:tw-outline-none tw-text-white tw-capitalize tw-tracking-wide tw-ml-2 tw-bg-gradient-to-r tw-from-primary-1 tw-to-primary"
+        @click="handleHireGoTo({ anchor: '#contact-id' })"
+        >Hire me</v-btn
+      >
     </v-app-bar>
     <v-main v-scroll="handleScroll">
       <v-container class="tw-my-8">
         <nuxt />
       </v-container>
     </v-main>
+    <v-footer color="white">
+      <v-col class="text-center tw-font-poppins" cols="12">
+        <div class="tw-inline-flex tw-items-center">
+          <v-img
+            contain
+            height="35"
+            width="35"
+            src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/house-stark_5BAFaqtUD.svg"
+          ></v-img>
+          <span class="tw-text-dark tw-mx-4">© 2021 design by rogersovich</span>
+          <v-img
+            contain
+            height="35"
+            width="35"
+            style="transform: scaleX(-1)"
+            src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/targaryen-house_Iwk_7YWj3NM.svg"
+          ></v-img>
+        </div>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
@@ -106,6 +132,12 @@ export default {
     doNothing() {
       return true
     },
+    handleHireGoTo(params) {
+      this.$vuetify.goTo(params.anchor, {
+        duration: 500,
+        offset: 0,
+      })
+    },
   },
 }
 </script>
@@ -116,7 +148,7 @@ export default {
 }
 
 ::v-deep .v-btn-toggle--group > .v-btn.v-btn {
-  margin: 4px 24px;
+  margin: 4px 16px;
   font-weight: 400;
 }
 </style>

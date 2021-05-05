@@ -9,6 +9,9 @@
     <v-col cols="12">
       <skill-component></skill-component>
     </v-col>
+    <v-col cols="12">
+      <contact-component></contact-component>
+    </v-col>
   </v-row>
 </template>
 
