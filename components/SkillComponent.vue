@@ -20,6 +20,17 @@
               <div class="tw-flex tw-items-center">
                 <span
                   class="tw-block tw-text-base md:tw-text-lg tw-font-bold tw-capitalize"
+                  >language :
+                </span>
+                <span
+                  class="tw-block tw-text-sm md:tw-text-base tw-font-normal tw-capitalize tw-ml-1"
+                >
+                  {{ item.title }}</span
+                >
+              </div>
+              <div class="tw-flex tw-items-center">
+                <span
+                  class="tw-block tw-text-base md:tw-text-lg tw-font-bold tw-capitalize"
                   >Level :
                 </span>
                 <span
