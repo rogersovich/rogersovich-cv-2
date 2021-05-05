@@ -15,31 +15,38 @@
           :color="item.colorBg"
         >
           <v-card-text class="tw-px-10">
-            <div
-              class="tw-grid tw-grid-cols-2 tw-gap-2 tw-flex tw-items-center"
-            >
-              <div>
-                <p
-                  class="tw-font-medium tw-text-dark tw-text-3xl tw-tracking-wide tw-mb-2"
-                >
-                  {{ item.title }}
-                </p>
-                <span class="tw-text-dark tw-text-base tw-font-medium"
-                  >{{ item.year }} - {{ item.as }}</span
-                >
-                <div class="tw-mt-10">
-                  <v-btn
-                    outlined
-                    rounded
-                    depressed
-                    color="secondary"
-                    class="focus:tw-outline-none tw-tracking-tight tw-capitalize"
-                    >Read more</v-btn
+            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+              <div class="tw-col-span-1 tw-flex tw-items-center">
+                <div class="tw-block">
+                  <p
+                    class="tw-font-medium tw-text-dark tw-text-3xl tw-tracking-wide tw-mb-2"
                   >
+                    {{ item.title }}
+                  </p>
+                  <span class="tw-text-dark tw-text-base tw-font-medium"
+                    >{{ item.year }} - {{ item.as }}</span
+                  >
+                  <div class="tw-mt-10">
+                    <v-btn
+                      outlined
+                      rounded
+                      depressed
+                      color="secondary"
+                      class="focus:tw-outline-none tw-tracking-tight tw-capitalize"
+                      >Read more</v-btn
+                    >
+                  </div>
                 </div>
               </div>
-              <div>
-                <v-img contain height="220" :src="item.thumbnail"></v-img>
+              <div class="tw-col-span-1 tw-flex tw-justify-center">
+                <div class="tw-block">
+                  <v-img
+                    contain
+                    width="200"
+                    height="220"
+                    :src="item.thumbnail"
+                  ></v-img>
+                </div>
               </div>
             </div>
           </v-card-text>

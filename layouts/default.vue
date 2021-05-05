@@ -114,6 +114,7 @@ export default {
       this.$vuetify.breakpoint.xsOnly ? this.doNothing() : this.processScroll()
     },
     processScroll() {
+      console.log(window.scrollY)
       // profile
       if (window.scrollY < 400) {
         const check = this.nav === 'profile'
@@ -122,10 +123,15 @@ export default {
         }
       }
       // portofolio
-      else if (window.scrollY > 400) {
+      else if (window.scrollY > 400 && window.scrollY < 1100) {
         const check = this.nav === 'portofolio'
         if (!check) {
           this.nav = 'portofolio'
+        }
+      } else if (window.scrollY > 1100) {
+        const check = this.nav === 'skill'
+        if (!check) {
+          this.nav = 'skill'
         }
       }
     },
