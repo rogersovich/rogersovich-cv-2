@@ -3,8 +3,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - rogersovich-cv-2',
-    title: 'rogersovich-cv-2',
+    titleTemplate: '%s - Rogersovich',
+    title: 'My CV',
     htmlAttrs: {
       lang: 'en',
     },
@@ -13,7 +13,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/ice-king.svg' }],
   },
   target: 'static',
 
