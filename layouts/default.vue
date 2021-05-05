@@ -3,14 +3,16 @@
     <v-app-bar
       elevate-on-scroll
       color="white"
+      height="70"
       app
-      class="tw-px-16 tw-font-poppins"
+      class="md:tw-px-16 tw-font-poppins"
+      width="100%"
     >
       <v-toolbar-title class="tw-flex tw-items-center">
         <v-img
           contain
-          height="50"
-          width="50"
+          :height="$vuetify.breakpoint.xsOnly ? 40 : 50"
+          :width="$vuetify.breakpoint.xsOnly ? 40 : 50"
           src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ice-king_ew2NTh-sB.svg"
         ></v-img>
         <span class="tw-font-medium tw-text-primary tw-text-base tw-ml-2"
@@ -20,7 +22,13 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn-toggle v-model="nav" group mandatory color="primary">
+      <v-btn-toggle
+        v-if="$vuetify.breakpoint.smAndUp"
+        v-model="nav"
+        group
+        mandatory
+        color="primary"
+      >
         <v-btn
           v-for="(item, i) in listNav"
           :key="i"
@@ -36,8 +44,9 @@
         </v-btn>
       </v-btn-toggle>
       <v-btn
+        :small="$vuetify.breakpoint.xsOnly ? true : false"
         depressed
-        class="focus:tw-outline-none tw-text-white tw-capitalize tw-tracking-wide tw-ml-2 tw-bg-gradient-to-r tw-from-primary-1 tw-to-primary"
+        class="focus:tw-outline-none tw-text-white tw-normal-case tw-tracking-normal sm:tw-tracking-wide tw-ml-2 tw-bg-gradient-to-r tw-from-primary-1 tw-to-primary tw-text-sm"
         @click="handleHireGoTo({ anchor: '#contact-id' })"
         >Hire me</v-btn
       >
@@ -114,7 +123,6 @@ export default {
       this.$vuetify.breakpoint.xsOnly ? this.doNothing() : this.processScroll()
     },
     processScroll() {
-      console.log(window.scrollY)
       // profile
       if (window.scrollY < 400) {
         const check = this.nav === 'profile'
