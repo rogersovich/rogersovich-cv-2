@@ -26,8 +26,9 @@
           :key="i"
           :ref="item.value"
           :value="item.value"
-          class="focus:tw-outline-none tw-capitalize tw-tracking-wide tw-text-red-secondary-1"
+          class="focus:tw-outline-none tw-capitalize tw-tracking-wide tw-text-secondary-1"
           active-class="tw-text-primary tw-font-bold"
+          @click="handleGoTo(item.value)"
         >
           <span>
             {{ item.text }}
@@ -35,7 +36,7 @@
         </v-btn>
       </v-btn-toggle>
     </v-app-bar>
-    <v-main>
+    <v-main v-scroll="handleScroll">
       <v-container class="tw-my-8">
         <nuxt />
       </v-container>
@@ -66,6 +67,45 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    handleGoTo(params) {
+      const check = params.split(/\W+/).length
+      let scrollId = ''
+      if (check === 1) {
+        const word = params.toLowerCase()
+        scrollId = '#' + word + '-id'
+      } else {
+        const word = params.split(' ').join('-').toLowerCase()
+        scrollId = '#' + word + '-id'
+      }
+      this.$vuetify.goTo(scrollId, {
+        duration: 500,
+        offset: 0,
+      })
+    },
+    handleScroll() {
+      this.$vuetify.breakpoint.xsOnly ? this.doNothing() : this.processScroll()
+    },
+    processScroll() {
+      // profile
+      if (window.scrollY < 400) {
+        const check = this.nav === 'profile'
+        if (!check) {
+          this.nav = 'profile'
+        }
+      }
+      // portofolio
+      else if (window.scrollY > 400) {
+        const check = this.nav === 'portofolio'
+        if (!check) {
+          this.nav = 'portofolio'
+        }
+      }
+    },
+    doNothing() {
+      return true
+    },
   },
 }
 </script>

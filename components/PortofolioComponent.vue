@@ -1,5 +1,5 @@
 <template>
-  <v-card id="portofolio-id" elevation="0">
+  <v-card id="portofolio-id" elevation="0" class="tw-my-8">
     <v-row justify="center">
       <v-col cols="12">
         <h2 class="tw-font-medium tw-text-dark tw-text-center tw-text-lg">
@@ -44,6 +44,19 @@
             </div>
           </v-card-text>
         </v-card>
+      </v-col>
+      <v-col cols="12">
+        <div class="tw-text-center">
+          <v-btn
+            depressed
+            rounded
+            dark
+            outlined
+            color="dark"
+            class="focus:tw-outline-none tw-capitalize tw-tracking-normal tw-px-4"
+            >Load more</v-btn
+          >
+        </div>
       </v-col>
     </v-row>
   </v-card>

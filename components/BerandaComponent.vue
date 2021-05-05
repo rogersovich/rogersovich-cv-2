@@ -39,6 +39,7 @@
               outlined
               color="dark"
               class="focus:tw-outline-none tw-tracking-wide tw-normal-case tw-px-6 tw-ml-2"
+              @click="handleGoTo({ anchor: '#portofolio-id' })"
               >See my works</v-btn
             >
           </div>
@@ -110,6 +111,14 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    handleGoTo(params) {
+      this.$vuetify.goTo(params.anchor, {
+        duration: 500,
+        offset: 0,
+      })
+    },
   },
 }
 </script>
