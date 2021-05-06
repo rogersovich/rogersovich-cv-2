@@ -70,7 +70,10 @@
     </v-row>
     <v-dialog v-model="detailPhoto" max-width="700">
       <v-card class="tw-border-none">
-        <v-carousel hide-delimiter-background>
+        <v-carousel
+          :height="$vuetify.breakpoint.smAndUp ? 400 : 200"
+          hide-delimiter-background
+        >
           <v-carousel-item
             v-for="(item, i) in selectedPhotos"
             :key="i"
@@ -83,13 +86,13 @@
 
     <v-snackbar
       v-model="snackbarWarning"
-      :timeout="2000"
+      :timeout="1000"
       top
-      color="#fd9644"
+      color="primary"
       right
     >
       <div class="tw-flex tw-items-center">
-        <span class="tw-font-bold tw-text-white">Still Under Development</span>
+        <span class="tw-font-bold tw-text-white">Tidak ada foto</span>
         <v-spacer></v-spacer>
         <v-btn
           class="focus:tw-outline-none"
@@ -138,7 +141,16 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(238, 56, 220, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ap2li-2_FabAX4iR-VH.jpeg',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ap2li_KL8uC5Chk.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bermuda-783_ShcA7DHD9.png',
         },
@@ -147,7 +159,28 @@ export default {
           year: 2019,
           as: 'Fullstack Developer',
           colorBg: 'rgba(32, 191, 107, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Kasir_-_Home_zMMCpmFd_s5.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Kasir_-_Menu_y1Ka7w7aLe.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Kasir_-_Orders_l0VLmbYLaP1.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Kasir_-_Payment_60hziSOOc.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Kasir_-_Table_KjX9kAMUvL8U.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/cafe_7wNZtg8QLpI0.png',
         },
@@ -161,29 +194,64 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/store_0BpVDDfLG.png',
         },
         {
-          title: 'Design app pengaduan masyarakat',
+          title: 'Design App Pengaduan Masyarakat',
           year: 2019,
           as: 'UI Design',
           colorBg: 'rgba(75, 75, 75, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Register_CI5IwZm7jaiF.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Home_Before_4AnTpIvV1.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Home_After_UxFW_uDdu.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Home_After___1_J8N2ivkhZ.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/report_lyhhvxuUo.png',
         },
         {
-          title: 'app pokemon in react',
+          title: 'App Pokemon in React',
           year: 2020,
           as: 'Desing my self',
           colorBg: 'rgba(255, 242, 0, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-react_not92FYQZ1I.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-2_4rqeSKiOL.png',
         },
         {
-          title: 'pokedex pokemon in nuxt',
+          title: 'Pokedex Pokemon in Nuxt',
           year: 2020,
           as: 'Desing my self',
           colorBg: 'rgba(255, 159, 26, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-nuxt-1_ezdIJ14eBw.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-nuxt-2_Xj0dsV6TB7.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-nuxt-3_m4rycwgUu.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-1_z9uduDiRd.png',
         },
@@ -197,11 +265,40 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/mercedez-1_1UlEmNJ1H.png',
         },
         {
-          title: 'anisaa ayu pratiwi',
+          title: 'Anisaa Ayu Pratiwi',
           year: 2020,
           as: 'Desing my self',
           colorBg: 'rgba(238, 56, 220, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa-1_ymZ4Veat4K.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa-2_HcBQ2Ui0N.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa-3_rWf-IJ-xc.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anissa-4_wERB2I7eKH3.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa-5_dfqb-2etFMC.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa-6_OGrCBcPYIoG.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa-7_IAtqo8xXD.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa_aUGjzmcAiJy0.png',
         },
@@ -210,7 +307,40 @@ export default {
           year: 2019,
           as: 'Design for the School',
           colorBg: 'rgba(32, 191, 107, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__220__QDLHI0edWBKS.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__221___uFqv_InoW.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__223__QbkSNE6Yw.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__224__s_tgSliSqm.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__222__iV8bNOJb8O.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__225__K1yIGkPEMyv.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__227__jnkd0slzO.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Screenshot__226__BbdXRZhM-X.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/summer-vibes_QapO1bd6J.png',
         },
@@ -219,7 +349,20 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(111, 30, 81, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/wedding1_ylu-irk_WA0.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/wedding2__2snmcpbP8.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/wedding3_Flt3UgtbB.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/wedding_1pHgZxiOKz.png',
         },
@@ -228,7 +371,44 @@ export default {
           year: 2019,
           as: 'UI Design',
           colorBg: 'rgba(75, 75, 75, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Home_yPKPdC0UGH.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Creatures_-_2_Q9y5YvuGQ.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Creatures_-1_39R1y41M9.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Activity_-1_uf-g0WR3a.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Activity_-_2_BClSdHk9jt4.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Weapon_-_1_d6QeFTlpMm.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Weapon_-_2_XAIWSxJ3Ca.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/timeline_-_1_zn49RVwaR.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/timeline_-_2_OGRn3UCZP.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ancient_xRTp2T5kf.png',
         },
@@ -237,7 +417,36 @@ export default {
           year: 2019,
           as: 'Desing my self',
           colorBg: 'rgba(255, 242, 0, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Chimeira___4__3jwhXlFV.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Chimeira_Story_st0gMj5Qr.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Chimeira_Skill_tfu7JZsOM.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Chimeira_diagram_i-PCB_gaCmE6.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Fairy_ca1y8sKAQ.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Medusa_gT69UXoKZ.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/Medusa_Skill_LHkQQ2Vh9Gp.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/creatures_DhmWaVrd8uE.png',
         },
@@ -256,7 +465,20 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(56, 180, 238, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/rumah-f-1_LctslQEDh.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/rumah-f-2_fCPHXH3yu.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/rumah-f-3_7x0ybseF3r.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/rumah_PcPcyYGKl.png',
         },
@@ -274,7 +496,20 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(32, 191, 107, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/d-rumah-1_f75IP8jYn.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/d-rumah-2_7_CekboS4.png',
+            },
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/d-rumah-3_gBphA4AYu.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/house-dashboard_MVp3QFrMB.png',
         },
@@ -283,7 +518,12 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(111, 30, 81, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/rumah-galeri_7vzSVBVpQ.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/gallery_7Ft2PB2vWX.png',
         },
@@ -329,7 +569,12 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(238, 56, 220, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Project/vconex-profile_RdV6sVmkH4.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/vconex-frontend_KTUCu_6Zx.png',
         },
@@ -347,7 +592,12 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(111, 30, 81, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/toyota_1__lys9R-QbL.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/toyota_mHpeioXOXf.png',
         },
@@ -365,18 +615,14 @@ export default {
           year: 2020,
           as: 'Fron End Developer',
           colorBg: 'rgba(255, 242, 0, 0.25)',
-          photos: [],
+          photos: [
+            {
+              src:
+                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bossgame_qlIrVdJWzQr.png',
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-2_4rqeSKiOL.png',
-        },
-        {
-          title: 'pokedex pokemon in nuxt',
-          year: 2020,
-          as: 'Desing my self',
-          colorBg: 'rgba(255, 159, 26, 0.25)',
-          photos: [],
-          thumbnail:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bossgame_tlpf-aVo1.png',
         },
       ],
     }
