@@ -31,7 +31,7 @@
               depressed
               rounded
               target="_blank"
-              href="https://drive.google.com/file/d/1qXcYpTClJQH2Y2rNecfm8p14xl3O6u3T/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SvmXqs9-hwdC1q4rj941GHfHzmZNt1fN/view?usp=sharing"
               class="focus:tw-outline-none tw-text-white tw-tracking-wide tw-normal-case tw-font-bold tw-px-6 tw-bg-gradient-to-r tw-from-primary-1 tw-to-primary"
               >Get CV</v-btn
             >
@@ -95,7 +95,7 @@
               contain
               src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-light-100__JqX_YhuW87.png"
             ></v-img>
-            <span class="tw-ml-2"> Bogor, West Java</span>
+            <span class="tw-ml-2 tw-text-sm"> Bogor, West Java</span>
           </div>
           <div class="tw-text-dark">
             <h4 class="tw-font-bold tw-text-2xl">Hello Guys!</h4>
@@ -114,7 +114,7 @@
               rounded
               small
               target="_blank"
-              href="https://drive.google.com/file/d/1qXcYpTClJQH2Y2rNecfm8p14xl3O6u3T/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SvmXqs9-hwdC1q4rj941GHfHzmZNt1fN/view?usp=sharing"
               class="focus:tw-outline-none tw-text-white tw-tracking-wide tw-normal-case tw-px-6 tw-bg-gradient-to-r tw-from-primary-1 tw-to-primary"
               >Get CV</v-btn
             >

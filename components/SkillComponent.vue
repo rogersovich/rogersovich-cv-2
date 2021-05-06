@@ -193,6 +193,45 @@ export default {
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/mysql_5wm0x7sETCy.png',
         },
+        {
+          title: 'cakep php',
+          level: 'basic',
+          time_used: '2019',
+          projects: [
+            {
+              title: 'test app',
+            },
+          ],
+
+          src:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/cake-php-img_wdMJeV1Ea.png',
+        },
+        {
+          title: 'adobe xd',
+          level: 'basic',
+          time_used: '2019-2020',
+          projects: [
+            {
+              title: 'test app',
+            },
+          ],
+
+          src:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/adobe-xd_Qi_aQxy_F.png',
+        },
+        {
+          title: 'figma',
+          level: 'basic',
+          time_used: '2019-2021',
+          projects: [
+            {
+              title: 'test app',
+            },
+          ],
+
+          src:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/adobe-ps_zkbWhtLig.png',
+        },
       ],
     }
   },

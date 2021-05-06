@@ -8,22 +8,24 @@
       class="md:tw-px-16 tw-font-poppins"
       width="100%"
     >
-      <v-toolbar-title class="tw-flex tw-items-center">
-        <v-img
-          contain
-          :height="$vuetify.breakpoint.xsOnly ? 40 : 50"
-          :width="$vuetify.breakpoint.xsOnly ? 40 : 50"
-          src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ice-king_ew2NTh-sB.svg"
-        ></v-img>
-        <span class="tw-font-medium tw-text-primary tw-text-base tw-ml-2"
-          >Rogersovich</span
-        >
-      </v-toolbar-title>
+      <nuxt-link :to="{ name: 'index' }">
+        <v-toolbar-title class="tw-flex tw-items-center">
+          <v-img
+            contain
+            :height="$vuetify.breakpoint.xsOnly ? 40 : 50"
+            :width="$vuetify.breakpoint.xsOnly ? 40 : 50"
+            src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ice-king_ew2NTh-sB.svg"
+          ></v-img>
+          <span class="tw-font-medium tw-text-primary tw-text-base tw-ml-2"
+            >Rogersovich</span
+          >
+        </v-toolbar-title>
+      </nuxt-link>
 
       <v-spacer></v-spacer>
 
       <v-btn-toggle
-        v-if="$vuetify.breakpoint.smAndUp"
+        v-if="$vuetify.breakpoint.smAndUp && $route.name !== 'portofolio'"
         v-model="nav"
         group
         mandatory
@@ -44,6 +46,14 @@
         </v-btn>
       </v-btn-toggle>
       <v-btn
+        v-if="$route.name === 'portofolio'"
+        depressed
+        text
+        class="focus:tw-outline-none tw-capitalize tw-px-6 tw-tracking-wide tw-text-primary tw-font-bold"
+        >portofolio</v-btn
+      >
+      <v-btn
+        v-if="$route.name !== 'portofolio'"
         :small="$vuetify.breakpoint.xsOnly ? true : false"
         depressed
         class="focus:tw-outline-none tw-text-white tw-normal-case tw-tracking-normal sm:tw-tracking-wide tw-ml-2 tw-bg-gradient-to-r tw-from-primary-1 tw-to-primary tw-text-sm"

@@ -82,6 +82,7 @@
             depressed
             rounded
             dark
+            :to="{ name: 'portofolio' }"
             outlined
             color="dark"
             class="focus:tw-outline-none tw-capitalize tw-tracking-normal tw-px-4"
