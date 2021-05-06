@@ -44,6 +44,10 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+  loading: {
+    color: '#38B4EE',
+    height: '3px',
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
