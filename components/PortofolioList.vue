@@ -71,8 +71,9 @@
     <v-dialog v-model="detailPhoto" max-width="700">
       <v-card class="tw-border-none">
         <v-carousel
-          :height="$vuetify.breakpoint.smAndUp ? 400 : 200"
+          :height="$vuetify.breakpoint.smAndUp ? 400 : 250"
           hide-delimiter-background
+          hide-delimiters
         >
           <v-carousel-item
             v-for="(item, i) in selectedPhotos"
@@ -622,7 +623,7 @@ export default {
             },
           ],
           thumbnail:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-2_4rqeSKiOL.png',
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bossgame_tlpf-aVo1.png',
         },
       ],
     }
