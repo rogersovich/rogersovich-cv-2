@@ -47,15 +47,35 @@
                   <span class="tw-text-dark tw-text-base tw-font-medium"
                     >{{ item.year }} - {{ item.as }}</span
                   >
-                  <div class="tw-mt-6 tw-mb-4">
+                  <div class="tw-mt-6 tw-mb-5">
                     <v-btn
                       outlined
                       rounded
                       depressed
+                      :to="{ name: 'portofolio' }"
                       color="secondary"
                       class="focus:tw-outline-none tw-tracking-tight tw-capitalize"
                       >Read more</v-btn
                     >
+                  </div>
+                  <div>
+                    <div class="tw-flex tw-items-center">
+                      <v-icon color="#2D3436" class="tw-text-2xl">
+                        mdi-attachment
+                      </v-icon>
+                      <a
+                        v-if="item.link !== ''"
+                        :href="item.link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="tw-underline tw-text-dark-1 tw-text-base tw-ml-2"
+                      >
+                        Lihat Attachment
+                      </a>
+                      <div v-else class="tw-text-dark-1 tw-text-base tw-ml-2">
+                        Tidak ada Attachment
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,20 +120,101 @@ export default {
     return {
       portofolios: [
         {
-          title: 'Mercedez Benz - Expo',
-          year: 2020,
+          title: 'Tribe Sininis',
+          year: 2021,
           as: 'Front End Developer',
           colorBg: 'rgba(56, 180, 238, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/tribeSininis/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/6.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/7.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/8.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/9.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/10.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/11.jpeg'),
+            },
+          ],
           thumbnail:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/car-ills_SF_nM2xtnA6.png',
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/wedding_1pHgZxiOKz.png',
         },
         {
-          title: 'AP2li - Expo',
-          year: 2020,
+          title: 'Sininis - Frontend',
+          year: 2021,
           as: 'Front End Developer',
           colorBg: 'rgba(238, 56, 220, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisWeb/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/6.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/7.jpeg'),
+            },
+          ],
           thumbnail:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bermuda-783_ShcA7DHD9.png',
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/report_lyhhvxuUo.png',
+        },
+        {
+          title: 'Mockup Design Mobile Warung',
+          year: 2021,
+          as: 'Design my self',
+          colorBg: 'rgba(255, 159, 26, 0.25)',
+          link:
+            'https://www.figma.com/file/q9D0Qdrh0eWMuPzH2ON2ZI/Mobile-Warung',
+          photos: [
+            {
+              src: require('@/assets/images/porto/warung/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/warung/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/warung/3.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/car-ills_SF_nM2xtnA6.png',
         },
       ],
     }

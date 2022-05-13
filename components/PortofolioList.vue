@@ -37,7 +37,7 @@
                   <span class="tw-text-dark tw-text-base tw-font-medium"
                     >{{ item.year }} - {{ item.as }}</span
                   >
-                  <div class="tw-mt-6 tw-mb-4">
+                  <div class="tw-mt-6 tw-mb-5">
                     <v-btn
                       outlined
                       rounded
@@ -47,6 +47,25 @@
                       @click="handleDetailPhoto(item.photos)"
                       >See Photo</v-btn
                     >
+                  </div>
+                  <div>
+                    <div class="tw-flex tw-items-center">
+                      <v-icon color="#2D3436" class="tw-text-2xl">
+                        mdi-attachment
+                      </v-icon>
+                      <a
+                        v-if="item.link !== ''"
+                        :href="item.link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="tw-underline tw-text-dark-1 tw-text-base tw-ml-2"
+                      >
+                        Lihat Attachment
+                      </a>
+                      <div v-else class="tw-text-dark-1 tw-text-base tw-ml-2">
+                        Tidak ada Attachment
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -120,6 +139,7 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(56, 180, 238, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -142,6 +162,7 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(238, 56, 220, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -160,6 +181,7 @@ export default {
           year: 2019,
           as: 'Fullstack Developer',
           colorBg: 'rgba(32, 191, 107, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -185,20 +207,22 @@ export default {
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/cafe_7wNZtg8QLpI0.png',
         },
-        {
-          title: 'App Warung Donto',
-          year: 2019,
-          as: 'Fullstack Developer',
-          colorBg: 'rgba(111, 30, 81, 0.25)',
-          photos: [],
-          thumbnail:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/store_0BpVDDfLG.png',
-        },
+        // {
+        //   title: 'App Warung Donto',
+        //   year: 2019,
+        //   as: 'School Assignment',
+        //   colorBg: 'rgba(111, 30, 81, 0.25)',
+        //   link: '',
+        //   photos: [],
+        //   thumbnail:
+        //     'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/store_0BpVDDfLG.png',
+        // },
         {
           title: 'Design App Pengaduan Masyarakat',
           year: 2019,
           as: 'UI Design',
           colorBg: 'rgba(75, 75, 75, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -225,6 +249,7 @@ export default {
           year: 2020,
           as: 'Desing my self',
           colorBg: 'rgba(255, 242, 0, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -239,6 +264,7 @@ export default {
           year: 2020,
           as: 'Desing my self',
           colorBg: 'rgba(255, 159, 26, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -261,6 +287,7 @@ export default {
           year: 2020,
           as: 'Back End Developer',
           colorBg: 'rgba(56, 180, 238, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/mercedez-1_1UlEmNJ1H.png',
@@ -270,6 +297,8 @@ export default {
           year: 2020,
           as: 'Desing my self',
           colorBg: 'rgba(238, 56, 220, 0.25)',
+          link:
+            'https://www.figma.com/file/GuD7mtKRA1Y0mREvx6l1Be/Anisaa-Ayu-Pratiwi',
           photos: [
             {
               src:
@@ -308,6 +337,7 @@ export default {
           year: 2019,
           as: 'Design for the School',
           colorBg: 'rgba(32, 191, 107, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -350,6 +380,7 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(111, 30, 81, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -372,6 +403,7 @@ export default {
           year: 2019,
           as: 'UI Design',
           colorBg: 'rgba(75, 75, 75, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -418,6 +450,7 @@ export default {
           year: 2019,
           as: 'Desing my self',
           colorBg: 'rgba(255, 242, 0, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -451,21 +484,23 @@ export default {
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/creatures_DhmWaVrd8uE.png',
         },
-        {
-          title: 'App Warung Santuy',
-          year: 2019,
-          as: 'School Assignment',
-          colorBg: 'rgba(255, 159, 26, 0.25)',
-          photos: [],
-          thumbnail:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/store_1__bZXJgFGHub.png',
-        },
+        // {
+        //   title: 'App Warung Santuy',
+        //   year: 2019,
+        //   as: 'School Assignment',
+        //   colorBg: 'rgba(255, 159, 26, 0.25)',
+        //   link: '',
+        //   photos: [],
+        //   thumbnail:
+        //     'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/store_1__bZXJgFGHub.png',
+        // },
         //
         {
           title: 'Rumahdotcom Front End',
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(56, 180, 238, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -488,6 +523,7 @@ export default {
           year: 2020,
           as: 'Back End Developer',
           colorBg: 'rgba(238, 56, 220, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/house-api_uEuJgLewQ.png',
@@ -497,6 +533,7 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(32, 191, 107, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -519,6 +556,7 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(111, 30, 81, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -533,6 +571,7 @@ export default {
           year: 2020,
           as: 'Back End Developer',
           colorBg: 'rgba(75, 75, 75, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/gallery-api_VEb-OOSGuq.png',
@@ -542,7 +581,30 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(255, 242, 0, 0.25)',
-          photos: [],
+          link: 'https://www.figma.com/file/J3EjJW2CJu43zPz4cnVdYa/TPM-Group',
+          photos: [
+            {
+              src: require('@/assets/images/porto/tpm/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tpm/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tpm/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tpm/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tpm/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tpm/6.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tpm/7.jpeg'),
+            },
+          ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/tpm_EqTPtDUwys-n.png',
         },
@@ -551,6 +613,7 @@ export default {
           year: 2020,
           as: 'Back End Developer',
           colorBg: 'rgba(255, 159, 26, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/tpm-api_w6aBjOsKb.png',
@@ -561,6 +624,7 @@ export default {
           year: 2020,
           as: 'Backend End Developer',
           colorBg: 'rgba(56, 180, 238, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ap2li-api_EtVd1svMEN.png',
@@ -570,10 +634,26 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(238, 56, 220, 0.25)',
+          link:
+            'https://www.figma.com/file/lI1Dzz7p3mVcgv65pvM7Ob/V-Conex-Website',
           photos: [
             {
-              src:
-                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Project/vconex-profile_RdV6sVmkH4.png',
+              src: require('@/assets/images/porto/vconex/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/vconex/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/vconex/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/vconex/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/vconex/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/vconex/6.jpeg'),
             },
           ],
           thumbnail:
@@ -584,6 +664,7 @@ export default {
           year: 2020,
           as: 'Backend End Developer',
           colorBg: 'rgba(32, 191, 107, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/vconex_9_S9_xsKI.png',
@@ -593,29 +674,46 @@ export default {
           year: 2020,
           as: 'Front End Developer',
           colorBg: 'rgba(111, 30, 81, 0.25)',
+          link:
+            'https://www.figma.com/file/sNVWSGXxC6ZFgbYRl8Ud0K/Toyota?node-id=1%3A2',
           photos: [
             {
-              src:
-                'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/toyota_1__lys9R-QbL.png',
+              src: require('@/assets/images/porto/toyota/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/toyota/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/toyota/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/toyota/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/toyota/5.jpeg'),
             },
           ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/toyota_mHpeioXOXf.png',
         },
+        // app sikoomar
         {
           title: 'App Sikoomar',
           year: 2021,
           as: 'Front End Developer',
           colorBg: 'rgba(75, 75, 75, 0.25)',
+          link: '',
           photos: [],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/sikoomar_MKloEojnR7-b.png',
         },
+        // end
         {
           title: 'App Bossgame',
           year: 2020,
           as: 'Fron End Developer',
           colorBg: 'rgba(255, 242, 0, 0.25)',
+          link: '',
           photos: [
             {
               src:
@@ -624,6 +722,344 @@ export default {
           ],
           thumbnail:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bossgame_tlpf-aVo1.png',
+        },
+        // ()
+        {
+          title: 'Mockup Design Mobile Warung',
+          year: 2021,
+          as: 'Design my self',
+          colorBg: 'rgba(255, 159, 26, 0.25)',
+          link:
+            'https://www.figma.com/file/q9D0Qdrh0eWMuPzH2ON2ZI/Mobile-Warung',
+          photos: [
+            {
+              src: require('@/assets/images/porto/warung/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/warung/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/warung/3.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/car-ills_SF_nM2xtnA6.png',
+        },
+        {
+          title: 'Mockup Design Monster Hunter',
+          year: 2021,
+          as: 'Design my self',
+          colorBg: 'rgba(56, 180, 238, 0.25)',
+          link:
+            'https://www.figma.com/file/eKZhpdznCACl1MlJjxzt5B/monster-hunter',
+          photos: [
+            {
+              src: require('@/assets/images/porto/mhw/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/mhw/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/mhw/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/mhw/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/mhw/5.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/bermuda-783_ShcA7DHD9.png',
+        },
+        {
+          title: 'Mockup Design Fairy Tale',
+          year: 2021,
+          as: 'Design my self',
+          colorBg: 'rgba(238, 56, 220, 0.25)',
+          link:
+            'https://www.figma.com/file/ysc5gEmrf4Jb1dGG3ypHHa/Fairy-tale?node-id=0%3A1',
+          photos: [
+            {
+              src: require('@/assets/images/porto/fairyTale/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/fairyTale/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/fairyTale/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/fairyTale/4.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/cafe_7wNZtg8QLpI0.png',
+        },
+        {
+          title: 'App Wedding Vconex 2',
+          year: 2020,
+          as: 'Front End Developer',
+          colorBg: 'rgba(32, 191, 107, 0.25)',
+          link: 'https://www.figma.com/file/0pYKSVSmSz2BtJ20fSe8FB/Wedding-1',
+          photos: [
+            {
+              src: require('@/assets/images/porto/wedding2/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/wedding2/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/wedding2/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/wedding2/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/wedding2/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/wedding2/6.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/store_0BpVDDfLG.png',
+        },
+        {
+          title: 'Sininis - Frontend',
+          year: 2021,
+          as: 'Front End Developer',
+          colorBg: 'rgba(111, 30, 81, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisWeb/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/6.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisWeb/7.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/report_lyhhvxuUo.png',
+        },
+        {
+          title: 'Sininis Buzzer',
+          year: 2021,
+          as: 'Front End Developer',
+          colorBg: 'rgba(75, 75, 75, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisBuzzer/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisBuzzer/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisBuzzer/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisBuzzer/4.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-2_4rqeSKiOL.png',
+        },
+        {
+          title: 'Sininis Board',
+          year: 2021,
+          as: 'Fron End Developer',
+          colorBg: 'rgba(255, 242, 0, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisBoard/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisBoard/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisBoard/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisBoard/4.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/pokemon-1_z9uduDiRd.png',
+        },
+        // ()
+        {
+          title: 'Sininis Caption',
+          year: 2021,
+          as: 'Fron End Developer',
+          colorBg: 'rgba(255, 159, 26, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisCaption/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisCaption/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisCaption/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisCaption/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisCaption/5.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/mercedez-1_1UlEmNJ1H.png',
+        },
+        {
+          title: 'Sininis Posting',
+          year: 2021,
+          as: 'Fron End Developer',
+          colorBg: 'rgba(56, 180, 238, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisPosting/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisPosting/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisPosting/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisPosting/4.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/anisaa_aUGjzmcAiJy0.png',
+        },
+        {
+          title: 'Sininis Coin',
+          year: 2021,
+          as: 'Fron End Developer',
+          colorBg: 'rgba(238, 56, 220, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sininisCoin/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sininisCoin/2.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/summer-vibes_QapO1bd6J.png',
+        },
+        {
+          title: 'Tribe Sininis',
+          year: 2021,
+          as: 'Front End Developer',
+          colorBg: 'rgba(32, 191, 107, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/tribeSininis/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/6.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/7.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/8.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/9.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/10.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/tribeSininis/11.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/wedding_1pHgZxiOKz.png',
+        },
+        {
+          title: 'Sininis - Sikoomar',
+          year: 2021,
+          as: 'Front End Developer',
+          colorBg: 'rgba(111, 30, 81, 0.25)',
+          link: '',
+          photos: [
+            {
+              src: require('@/assets/images/porto/sikoomar/1.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/2.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/3.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/4.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/5.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/6.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/7.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/8.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/9.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/10.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/11.jpeg'),
+            },
+            {
+              src: require('@/assets/images/porto/sikoomar/12.jpeg'),
+            },
+          ],
+          thumbnail:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/ancient_xRTp2T5kf.png',
         },
       ],
     }
