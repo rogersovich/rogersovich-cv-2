@@ -15,7 +15,9 @@
             <span class="tw-text-primary tw-font-medium"> Say hello at</span>
           </div>
           <a href="mailto:dimasroger89@gmail.com">
-            <div class="tw-text-dark tw-text-xl tw-font-medium">
+            <div
+              class="tw-text-dark tw-text-xl tw-font-semibold tw-tracking-wide"
+            >
               dimasroger89@gmail.com
             </div>
           </a>

@@ -162,32 +162,32 @@ export default {
       socialMedia: [
         {
           text: 'instagram',
-          height: 24,
-          width: 24,
-          href: 'https://www.instagram.com/rogersovichhh/?hl=id',
+          height: 35,
+          width: 35,
+          href: 'https://www.instagram.com/dimessup/?hl=id',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-instagram-150_pvAwfqy8l.png',
         },
         {
           text: 'email',
-          height: 26,
-          width: 26,
+          height: 35,
+          width: 35,
           href: 'mailto:dimasroger89@gmail.com',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-mail-150_vRCz0jWKN.png',
         },
         {
           text: 'linkedin',
-          height: 26,
-          width: 26,
+          height: 35,
+          width: 35,
           href: 'https://www.linkedin.com/in/dimas-roger-9b93491a1/',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-linkedin-150_lRDzLzGaU.png',
         },
         {
-          text: 'secret',
-          height: 25,
-          width: 25,
+          text: 'github',
+          height: 35,
+          width: 35,
           href: 'https://github.com/rogersovich',
           src:
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-github-150_jwXCRvu0C.png',

@@ -50,7 +50,7 @@
                   {{ item.time_used }}</span
                 >
               </div>
-              <div
+              <!-- <div
                 v-if="Object.keys(item.projects).length > 0"
                 class="tw-block"
               >
@@ -72,7 +72,7 @@
                     >
                   </template>
                 </div>
-              </div>
+              </div> -->
             </div>
           </v-card-text>
         </v-card>
@@ -87,7 +87,7 @@ export default {
     return {
       skills: [
         {
-          title: 'laravel',
+          title: 'Laravel',
           level: 'advance',
           time_used: '2018-2021',
           projects: [
@@ -105,7 +105,7 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/laravel_KXiU8AnT2.png',
         },
         {
-          title: 'vue',
+          title: 'Vue JS',
           level: 'advance',
           time_used: '2020-2021',
           projects: [
@@ -124,7 +124,7 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/vueJs_lfUof3d4u.webp',
         },
         {
-          title: 'nuxt',
+          title: 'Nuxt JS',
           level: 'advance',
           time_used: '2020-2021',
           projects: [
@@ -146,9 +146,46 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/nuxt-removebg-preview_-ve-drOMI2J.png',
         },
         {
-          title: 'figma',
-          level: 'advance',
-          time_used: '2020-2021',
+          title: 'Mysql',
+          level: 'Medium',
+          time_used: '2018-2021',
+          projects: [
+            {
+              title: 'All project im using this',
+            },
+          ],
+
+          src:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/mysql_5wm0x7sETCy.png',
+        },
+        {
+          title: 'React JS',
+          level: 'Medium',
+          time_used: '2021-2022',
+          projects: [
+            {
+              title: 'cv app',
+            },
+            {
+              title: 'pokemon app',
+            },
+          ],
+
+          src:
+            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-react_3BJ8FTTrW.svg',
+        },
+
+        {
+          title: 'Next JS',
+          level: 'basic',
+          time_used: '2022',
+          projects: [],
+          src: require('@/assets/images/general/nextjs-logo.png'),
+        },
+        {
+          title: 'Figma',
+          level: 'Medium',
+          time_used: '2020-2022',
           projects: [
             {
               title: 'mockup my cv',
@@ -165,51 +202,9 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/figma_VBzDWf2tU.webp',
         },
         {
-          title: 'react',
-          level: 'basic',
-          time_used: '2021',
-          projects: [
-            {
-              title: 'cv app',
-            },
-            {
-              title: 'pokemon app',
-            },
-          ],
-
-          src:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/icons8-react_3BJ8FTTrW.svg',
-        },
-        {
-          title: 'mysql',
-          level: 'advance',
-          time_used: '2018-2021',
-          projects: [
-            {
-              title: 'All project im using this',
-            },
-          ],
-
-          src:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/mysql_5wm0x7sETCy.png',
-        },
-        {
-          title: 'cakep php',
-          level: 'basic',
-          time_used: '2019',
-          projects: [
-            {
-              title: 'test app',
-            },
-          ],
-
-          src:
-            'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/cake-php-img_wdMJeV1Ea.png',
-        },
-        {
-          title: 'adobe xd',
-          level: 'basic',
-          time_used: '2019-2020',
+          title: 'Adobe XD',
+          level: 'Medium',
+          time_used: '2019-2021',
           projects: [
             {
               title: 'test app',
@@ -220,9 +215,9 @@ export default {
             'https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/adobe-xd_Qi_aQxy_F.png',
         },
         {
-          title: 'figma',
-          level: 'basic',
-          time_used: '2019-2021',
+          title: 'Photoshop',
+          level: 'Medium',
+          time_used: '2019-2022',
           projects: [
             {
               title: 'test app',

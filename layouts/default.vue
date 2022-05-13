@@ -76,7 +76,7 @@
             src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/house-stark_5BAFaqtUD.svg"
           ></v-img>
           <span class="tw-text-dark tw-mx-4 tw-text-xs md:tw-text-base"
-            >© 2021 design by rogersovich</span
+            >© {{ new Date().getFullYear() }} design by rogersovich</span
           >
           <v-img
             contain
